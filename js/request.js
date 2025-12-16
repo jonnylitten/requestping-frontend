@@ -14,7 +14,7 @@ document.getElementById('logout').addEventListener('click', (e) => {
 // Load agencies from FOIA.gov API
 async function loadAgencies() {
     try {
-        const response = await fetch('/api/agencies');
+        const response = await fetch(`${API_BASE_URL}/api/agencies');
         const data = await response.json();
 
         const select = document.getElementById('agency');
@@ -73,7 +73,7 @@ document.getElementById('request-form').addEventListener('submit', async (e) => 
     successDiv.style.display = 'none';
 
     try {
-        const response = await fetch('/api/requests', {
+        const response = await fetch(`${API_BASE_URL}/api/requests', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

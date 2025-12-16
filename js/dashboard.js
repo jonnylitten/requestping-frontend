@@ -14,7 +14,7 @@ document.getElementById('logout').addEventListener('click', (e) => {
 // Load user's requests
 async function loadRequests() {
     try {
-        const response = await fetch('/api/requests', {
+        const response = await fetch(`${API_BASE_URL}/api/requests', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
