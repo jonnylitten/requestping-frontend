@@ -297,6 +297,7 @@ h3 {
 .cta-final .primary-button {
     background: white;
     color: var(--primary-color);
+    margin-top: 2rem;
 }
 
 .cta-final .primary-button:hover {
