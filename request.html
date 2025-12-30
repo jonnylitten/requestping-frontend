@@ -19,19 +19,19 @@
 
     <main>
         <div style="max-width: 800px; margin: 2rem auto;">
-            <h1>New FOIA Request</h1>
+            <h1>New Virginia FOIA Request</h1>
             <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-                Tell us what records you're looking for. We'll help craft a proper FOIA request and file it anonymously on your behalf.
+                Tell us what records you're looking for. We'll craft a proper Virginia FOIA request and file it on your behalf with the state agency.
             </p>
 
             <form id="request-form">
                 <div class="form-group">
-                    <label for="agency">Federal Agency *</label>
+                    <label for="agency">Virginia State Agency *</label>
                     <select id="agency" name="agency" required>
                         <option value="">Select an agency...</option>
                         <option value="loading">Loading agencies...</option>
                     </select>
-                    <small>Which federal agency has the records you need?</small>
+                    <small>Which Virginia state agency has the records you need?</small>
                 </div>
 
                 <div class="form-group">
@@ -68,8 +68,8 @@
                 <div class="form-group">
                     <label>Fee Information</label>
                     <p style="background: var(--bg-secondary); padding: 1rem; border-radius: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
-                        <strong>Note:</strong> Since we file requests in RequestPing's name, commercial fee rates apply by default.
-                        You may be responsible for search and duplication fees. We'll notify you if fees are expected before processing the request.
+                        <strong>Virginia FOIA Fees:</strong> Under Virginia law, agencies may charge for records if the request requires more than 5 hours of staff time.
+                        Fees are calculated at the employee's hourly rate. We'll notify you if fees are expected before processing.
                         You can request a fee waiver if your request serves the public interest.
                     </p>
                     <label style="margin-top: 0.5rem;">
@@ -81,13 +81,13 @@
                 <div class="form-group" id="fee-waiver-justification" style="display: none;">
                     <label for="waiver-reason">Fee Waiver Justification</label>
                     <textarea id="waiver-reason" name="waiver-reason" placeholder="Explain how disclosure of this information serves the public interest..."></textarea>
-                    <small>Explain how this information will contribute to public understanding of government operations.</small>
+                    <small>Explain how this information will contribute to public understanding of Virginia government operations.</small>
                 </div>
 
                 <div class="form-group">
                     <label>
                         <input type="checkbox" id="acknowledge-commercial" name="acknowledge-commercial" required>
-                        I understand that commercial fee rates may apply and that I may be responsible for search and duplication fees
+                        I understand that fees may apply if my request requires more than 5 hours of staff time, per Virginia FOIA guidelines
                     </label>
                 </div>
 

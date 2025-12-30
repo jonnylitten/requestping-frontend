@@ -1,10 +1,16 @@
 # RequestPing Frontend
 
-Privacy-first FOIA request filing service - Frontend
+Virginia FOIA request filing service - Frontend
 
 ## Overview
 
-Clean, responsive frontend for RequestPing. Users can sign up, file anonymous FOIA requests, and track their status.
+Clean, responsive frontend for RequestPing. Users can sign up, file Virginia FOIA requests to state agencies, and track their status.
+
+**Virginia-Specific Features:**
+- All Virginia state agencies supported
+- 5-day response timeline tracking
+- Virginia FOIA law compliance (Va. Code § 2.2-3700 et seq.)
+- Professional request formatting and submission
 
 ## Tech Stack
 
