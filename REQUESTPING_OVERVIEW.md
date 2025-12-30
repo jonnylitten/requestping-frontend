@@ -7,12 +7,7 @@
 
 If you've ever filed FOIA requests in Virginia, you know the pain points:
 
-1. **Your Identity is Public** - When you file a FOIA request from your personal email, the agency knows exactly who you are. This can lead to:
-   - **Retaliation or targeting** by officials you're investigating
-   - **Tip-offs** - agencies alerting subjects that you're investigating them
-   - **Harassment** - being contacted, questioned, or intimidated
-   - **Professional consequences** - employers, colleagues, or subjects finding out what you're researching
-   - **Pattern recognition** - agencies tracking what you're interested in across multiple requests
+1. **Your Identity is Public** - When you file a FOIA request from your personal email, the agency knows exactly who you are.
 
 2. **Finding the right agency contact** - Every Virginia agency has a different FOIA officer, different email address, and different procedures
 
@@ -194,12 +189,12 @@ Documents: 12 PDFs available
 
 ### **Privacy Protection (The #1 Benefit)**
 
-**Your identity stays completely hidden from agencies.**
+**Your identity stays completely hidden from everyone - agencies AND the public.**
 
 When you file through RequestPing:
-- Agency sees: "RequestPing, on behalf of a Virginia constituent"
-- Agency does NOT see: Your name, your email, your phone, any identifying information
-- You remain: Completely anonymous
+- What appears in public records: "RequestPing, on behalf of a Virginia constituent"
+- What NO ONE sees: Your name, your email, your phone, any identifying information
+- You remain: Completely anonymous from both government and the public
 
 **Why this matters:**
 
@@ -208,7 +203,7 @@ When you file through RequestPing:
 - ✅ Request records about powerful people without tipping them off
 - ✅ Protect sources who suggested what to request
 - ✅ Avoid being targeted by subjects of your investigation
-- ✅ Prevent agencies from connecting the dots across multiple requests
+- ✅ Prevent anyone (agencies, subjects, competitors) from tracking your investigation through public FOIA logs
 
 **For Whistleblowers & Insiders:**
 - ✅ Request records related to your workplace without revealing yourself
@@ -223,10 +218,10 @@ When you file through RequestPing:
 - ✅ Keep your organizing strategy private
 
 **For Private Citizens:**
-- ✅ Request records about neighbors, landlords, or local issues without them knowing it was you
+- ✅ Request records about neighbors, landlords, or local issues without them finding out it was you
 - ✅ Investigate problems without becoming a target
 - ✅ Keep your personal life private while exercising FOIA rights
-- ✅ Avoid awkward confrontations or social consequences
+- ✅ Avoid awkward confrontations, social consequences, or retaliation from people you're investigating
 
 **For Researchers:**
 - ✅ Request sensitive data without revealing research hypotheses
@@ -415,54 +410,3 @@ It doesn't change what you can request (that's determined by Virginia law). It d
 
 ---
 
-## Questions Your Dad Might Have
-
-**Q: Why would agencies respond better to RequestPing than to me directly?**
-
-A: They don't necessarily respond *faster*, but they're more likely to process requests correctly the first time because:
-- Professional formatting reduces confusion
-- Proper citations show you know the law
-- Consistent sender (RequestPing) builds familiarity
-- Clear fee language prevents misunderstandings
-
-**Q: Can agencies tell it's not me filing directly?**
-
-A: Yes, the email clearly states "RequestPing on behalf of a Virginia constituent." But they have **no idea who the actual person is**. This is:
-- ✅ 100% legally compliant with Virginia FOIA
-- ✅ Honest and transparent about using a filing service
-- ✅ Actually preferred by some FOIA officers (professional filers get better treatment)
-- ✅ Common practice (lawyers, journalists, and researchers often file on behalf of others)
-
-The agency knows someone is requesting records, but they have zero information about your identity.
-
-**Q: What happens to my personal information?**
-
-A: Your email is stored securely and never shared. Agencies only see RequestPing's email address, not yours. You can choose to include your contact info in the request description if needed.
-
-**Q: What if an agency calls or emails me directly?**
-
-A: They won't have your direct contact unless you include it. They'll respond to RequestPing's email address. (Future enhancement: RequestPing forwards responses to you automatically.)
-
-**Q: How do I get my documents?**
-
-A: Currently, you update RequestPing to note "completed" and manage documents yourself. Future versions will auto-capture documents from agency responses.
-
-**Q: What about appeals if denied?**
-
-A: Not automated yet, but on the roadmap. For now, you'd handle appeals yourself using Virginia's FOIA appeal process.
-
-**Q: Does this cost money?**
-
-A: Not yet launched publicly. Current users (jk@ and jj@) are free beta testers.
-
----
-
-**That's RequestPing!**
-
-A focused tool for making Virginia FOIA requests faster, easier, and more professional.
-
-Built by someone who understands FOIA pain points, for people who live in FOIA world.
-
----
-
-*Questions? Want to help develop it further? Let's talk about what would make this most useful for your FOIA workflow.*
