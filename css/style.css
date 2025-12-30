@@ -49,6 +49,15 @@ nav {
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.virginia-icon {
+    width: 28px;
+    height: 14px;
+    color: var(--primary-color);
 }
 
 .nav-links {
