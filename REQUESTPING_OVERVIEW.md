@@ -255,7 +255,7 @@ When you file through RequestPing:
 2. **Automatic Email Submission** - For agencies with email contacts
 3. **Dashboard Tracking** - See all your requests and their statuses
 4. **Virginia FOIA Compliance** - Proper legal citations and formatting
-5. **Monthly Request Limits** - 5 requests per month per user (adjustable)
+5. **Pay Per Request Pricing** - $15 per request, no subscription required
 6. **Secure Login** - Magic link authentication (no passwords)
 
 ### 🔄 **What's Manual (For Now):**
@@ -401,12 +401,19 @@ It doesn't change what you can request (that's determined by Virginia law). It d
 - Makes tracking easier (dashboard vs. email chaos)
 - Makes you more productive (file more requests in less time)
 
+**Pricing:**
+- $15 per request (no subscription required)
+- Pay only for what you use
+- No monthly fees, no hidden charges
+- Much cheaper than hiring a lawyer ($100s per request)
+- Premium value for complete anonymity protection
+
 **It's especially valuable if you:**
 - File requests regularly (3+ per year)
 - Request from multiple agencies
 - Need to track multiple requests simultaneously
-- Want to maintain professional relationships with FOIA officers
-- Value your time
+- Want complete anonymity from agencies and the public
+- Value your time and privacy
 
 ---
 
