@@ -564,6 +564,14 @@ footer {
     margin-bottom: 0.25rem;
 }
 
+.entity-type {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.25rem;
+}
+
 .entity-description {
     font-size: 0.85rem;
     color: var(--text-secondary);

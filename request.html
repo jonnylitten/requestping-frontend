@@ -26,18 +26,11 @@
 
             <form id="request-form">
                 <div class="form-group">
-                    <label>Select Entity Type *</label>
-                    <div class="category-tabs">
-                        <button type="button" class="category-tab active" data-category="state_agency">State Agency</button>
-                        <button type="button" class="category-tab" data-category="city">City</button>
-                        <button type="button" class="category-tab" data-category="town">Town</button>
-                        <button type="button" class="category-tab" data-category="university">University</button>
-                    </div>
-
+                    <label for="entity-search">Virginia Entity *</label>
                     <div class="autocomplete-wrapper">
                         <input type="text"
                                id="entity-search"
-                               placeholder="Type to search..."
+                               placeholder="Search for state agency, city, town, or university..."
                                autocomplete="off"
                                required>
                         <div id="autocomplete-results" class="autocomplete-results"></div>
@@ -49,7 +42,7 @@
                     <input type="hidden" id="selected-entity-abbr" name="entity_abbr">
 
                     <div id="selected-entity-display" class="selected-entity"></div>
-                    <small>Search for the Virginia entity that has the records you need.</small>
+                    <small>Search across all Virginia state agencies, cities, towns, and universities.</small>
                 </div>
 
                 <div class="form-group">

@@ -13,7 +13,6 @@ document.getElementById('logout').addEventListener('click', (e) => {
 
 // State management
 let allEntities = [];
-let currentCategory = 'state_agency';
 let selectedEntity = null;
 
 // Load all entities on page load
@@ -22,27 +21,11 @@ async function loadEntities() {
         const response = await fetch(`${API_BASE_URL}/api/entities`);
         const data = await response.json();
         allEntities = data.entities;
+        console.log('Loaded entities:', allEntities.length);
     } catch (error) {
         console.error('Error loading entities:', error);
     }
 }
-
-// Category tab switching
-document.querySelectorAll('.category-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-        // Update active tab
-        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-
-        // Update current category
-        currentCategory = this.dataset.category;
-
-        // Clear search and results
-        document.getElementById('entity-search').value = '';
-        document.getElementById('autocomplete-results').innerHTML = '';
-        clearSelectedEntity();
-    });
-});
 
 // Real-time autocomplete search
 const searchInput = document.getElementById('entity-search');
@@ -58,9 +41,8 @@ searchInput.addEventListener('input', function(e) {
         return;
     }
 
-    // Filter entities by current category and search query
+    // Search across ALL entity types
     const filtered = allEntities
-        .filter(entity => entity.category === currentCategory)
         .filter(entity =>
             entity.name.toLowerCase().includes(query) ||
             (entity.abbreviation && entity.abbreviation.toLowerCase().includes(query)) ||
@@ -79,18 +61,25 @@ function displayAutocompleteResults(entities) {
         return;
     }
 
+    const categoryLabels = {
+        'state_agency': 'State Agency',
+        'city': 'City',
+        'town': 'Town',
+        'university': 'University'
+    };
+
     const html = entities.map(entity => {
         const displayName = entity.abbreviation
             ? `${entity.name} (${entity.abbreviation})`
             : entity.name;
-        const description = entity.description || '';
+        const categoryLabel = categoryLabels[entity.category] || entity.category;
         const hasEmail = entity.email ? '<span class="entity-badge">Email</span>' : '';
         const hasPortal = entity.portal ? '<span class="entity-badge portal">Portal</span>' : '';
 
         return `
             <div class="autocomplete-item" data-entity-id="${entity.id}">
                 <div class="entity-name">${displayName} ${hasEmail} ${hasPortal}</div>
-                ${description ? `<div class="entity-description">${description}</div>` : ''}
+                <div class="entity-type">${categoryLabel}</div>
             </div>
         `;
     }).join('');
