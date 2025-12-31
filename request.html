@@ -43,7 +43,7 @@
                 <div class="form-group">
                     <label for="description">Detailed Description *</label>
                     <textarea id="description" name="description" required placeholder="Describe the records you're seeking in as much detail as possible. Include dates, names, keywords, or any other identifying information that will help the agency locate the records."></textarea>
-                    <small>The more specific you are, the better. Include relevant dates, names, departments, or other identifying details.</small>
+                    <small><strong>Be specific to avoid delays!</strong> Good examples: "All emails sent by John Smith in the Planning Department between Jan 1-31, 2024 containing the word 'zoning'" or "The inspection report for 123 Main Street conducted on March 15, 2024." Bad examples: "All emails about zoning" (too broad) or "Everything related to planning" (too vague). If your request is very broad, agencies may estimate high costs - we'll contact you before proceeding.</small>
                 </div>
 
                 <div class="form-group">
@@ -59,7 +59,7 @@
                 <div class="form-group">
                     <label for="delivery-format">Preferred Delivery Format</label>
                     <select id="delivery-format" name="delivery-format">
-                        <option value="electronic">Electronic (PDF)</option>
+                        <option value="electronic">Electronic</option>
                         <option value="paper">Paper copies</option>
                         <option value="either">Either</option>
                     </select>
@@ -68,26 +68,14 @@
                 <div class="form-group">
                     <label>Fee Information</label>
                     <p style="background: var(--bg-secondary); padding: 1rem; border-radius: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
-                        <strong>Virginia FOIA Fees:</strong> Under Virginia law, agencies may charge for records if the request requires more than 5 hours of staff time.
-                        Fees are calculated at the employee's hourly rate. We'll notify you if fees are expected before processing.
-                        You can request a fee waiver if your request serves the public interest.
+                        <strong>Virginia FOIA Fees:</strong> Agencies may charge for actual costs of accessing, duplicating, supplying, or searching for records. Costs are based on staff hourly rates. We'll notify you if the agency estimates fees before proceeding with your request.
                     </p>
-                    <label style="margin-top: 0.5rem;">
-                        <input type="checkbox" id="request-fee-waiver" name="request-fee-waiver">
-                        Request fee waiver (public interest justification required)
-                    </label>
-                </div>
-
-                <div class="form-group" id="fee-waiver-justification" style="display: none;">
-                    <label for="waiver-reason">Fee Waiver Justification</label>
-                    <textarea id="waiver-reason" name="waiver-reason" placeholder="Explain how disclosure of this information serves the public interest..."></textarea>
-                    <small>Explain how this information will contribute to public understanding of Virginia government operations.</small>
                 </div>
 
                 <div class="form-group">
                     <label>
-                        <input type="checkbox" id="acknowledge-commercial" name="acknowledge-commercial" required>
-                        I understand that fees may apply if my request requires more than 5 hours of staff time, per Virginia FOIA guidelines
+                        <input type="checkbox" id="acknowledge-fees" name="acknowledge-fees" required>
+                        I understand that agencies may charge actual costs for fulfilling my request, and RequestPing will contact me if fees are estimated before proceeding
                     </label>
                 </div>
 

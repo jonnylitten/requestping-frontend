@@ -34,21 +34,6 @@ async function loadAgencies() {
     }
 }
 
-// Toggle fee waiver justification field
-document.getElementById('request-fee-waiver').addEventListener('change', (e) => {
-    const justificationDiv = document.getElementById('fee-waiver-justification');
-    const justificationField = document.getElementById('waiver-reason');
-
-    if (e.target.checked) {
-        justificationDiv.style.display = 'block';
-        justificationField.required = true;
-    } else {
-        justificationDiv.style.display = 'none';
-        justificationField.required = false;
-        justificationField.value = '';
-    }
-});
-
 // Handle form submission
 document.getElementById('request-form').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -61,9 +46,7 @@ document.getElementById('request-form').addEventListener('submit', async (e) => 
         description: document.getElementById('description').value,
         date_range_start: document.getElementById('date-range-start').value || null,
         date_range_end: document.getElementById('date-range-end').value || null,
-        delivery_format: document.getElementById('delivery-format').value,
-        request_fee_waiver: document.getElementById('request-fee-waiver').checked,
-        waiver_reason: document.getElementById('waiver-reason').value || null
+        delivery_format: document.getElementById('delivery-format').value
     };
 
     const errorDiv = document.getElementById('error-message');
