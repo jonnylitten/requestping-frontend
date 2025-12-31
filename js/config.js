@@ -1,4 +1,4 @@
 // API Configuration
 const API_BASE_URL = window.location.hostname === 'localhost'
     ? 'http://localhost:3002'
-    : 'https://requestping-backend-production.up.railway.app';
+    : 'https://regping-production.up.railway.app';
