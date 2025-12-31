@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Entities - RequestPing</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .browse-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .browse-controls input,
+        .browse-controls select {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .entities-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: var(--shadow-md);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .entities-table thead {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .entities-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .entities-table th:hover {
+            background: var(--primary-dark);
+        }
+
+        .entities-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .entities-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .entities-table tbody tr:hover {
+            background: var(--bg-secondary);
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-state_agency { background: #dbeafe; color: #1e40af; }
+        .badge-county { background: #fef3c7; color: #92400e; }
+        .badge-city { background: #d1fae5; color: #065f46; }
+        .badge-town { background: #e0e7ff; color: #4338ca; }
+        .badge-university { background: #fce7f3; color: #9f1239; }
+
+        .contact-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            background: var(--success-color);
+            color: white;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 0.25rem;
+        }
+
+        .contact-badge.portal {
+            background: var(--secondary-color);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .entities-table {
+                font-size: 0.85rem;
+            }
+
+            .entities-table th,
+            .entities-table td {
+                padding: 0.5rem;
+            }
+
+            .entities-table .hide-mobile {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RequestPing</div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="browse.html" class="active">Browse Entities</a>
+                <a href="#" id="logout">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div style="max-width: 1400px; margin: 2rem auto; padding: 0 1rem;">
+            <h1>Browse All Virginia FOIA Entities</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                Complete directory of all Virginia state agencies, counties, cities, towns, and universities.
+            </p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-count">0</div>
+                    <div class="stat-label">Total Entities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="filtered-count">0</div>
+                    <div class="stat-label">Showing</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="email-count">0</div>
+                    <div class="stat-label">With Email</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="portal-count">0</div>
+                    <div class="stat-label">With Portal</div>
+                </div>
+            </div>
+
+            <div class="browse-controls">
+                <input type="text" id="search" placeholder="Search entities..." />
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="state_agency">State Agencies</option>
+                    <option value="county">Counties</option>
+                    <option value="city">Cities</option>
+                    <option value="town">Towns</option>
+                    <option value="university">Universities</option>
+                </select>
+                <select id="contact-filter">
+                    <option value="">All Contact Methods</option>
+                    <option value="email">Has Email</option>
+                    <option value="portal">Has Portal</option>
+                </select>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="entities-table" id="entities-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="name">Name ▲▼</th>
+                            <th data-sort="category">Category ▲▼</th>
+                            <th class="hide-mobile" data-sort="foia_officer">FOIA Officer ▲▼</th>
+                            <th class="hide-mobile">Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entities-tbody">
+                        <tr>
+                            <td colspan="4" class="no-results">Loading entities...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/browse.js"></script>
+</body>
+</html>
