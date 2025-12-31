@@ -63,6 +63,7 @@ function displayAutocompleteResults(entities) {
 
     const categoryLabels = {
         'state_agency': 'State Agency',
+        'county': 'County',
         'city': 'City',
         'town': 'Town',
         'university': 'University'
